@@ -15,7 +15,7 @@ pipelines:
         SSH_PSW: "AES:Ek4CX8s3Rm1v66ck8o2lmA==:98jrieFLfuzj6cufTHWeNA=="        
     environment_variables:                                                            # Pipeline Varaibles
         COMPONENT: mysql
-    template: App-Deployment-Template
+    template: App-Deployments-Template
 
     
   
