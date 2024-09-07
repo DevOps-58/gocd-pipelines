@@ -12,7 +12,7 @@ pipelines:
         display_order: -1
         lock_behavior: none
     secure_variables:
-        SSH_PSW: "AES:Ek4CX8s3Rm1v66ck8o2lmA==:98jrieFLfuzj6cufTHWeNA=="
+        SSH_PSW:  "AES:HRTAQYp1YuLfusysqgp/iA==:KsQ4Lo0I5PwuShFOe2DT9w=="
     environment_variables:
         pipeline: "true"
     stages:                                       
@@ -23,7 +23,7 @@ pipelines:
           environment_variables:
             ENV: dev
           secure_variables:
-              MYSQL_PSW: "AES:bcoFvqU5NnPhfWPHaWA2sA==:jjFJBOwv6LxDXcwIsb0+sw==" 
+              MYSQL_PSW: "AES:DziuU1HRqmHAhwXPo3h4rA==:Z9jRxUu49k40EqzvOnrXYA=="
           jobs:
             Build:
               tasks:
@@ -39,7 +39,7 @@ pipelines:
             environment_variables:
               ENV: qa
             secure_variables:
-                MYSQL_PSW: "AES:bcoFvqU5NnPhfWPHaWA2sA==:jjFJBOwv6LxDXcwIsb0+sw=="
+                MYSQL_PSW: "AES:DziuU1HRqmHAhwXPo3h4rA==:Z9jRxUu49k40EqzvOnrXYA=="
           jobs:
             Build:
               tasks:
@@ -54,7 +54,7 @@ pipelines:
             environment_variables:
               ENV: stage
             secure_variables:
-                MYSQL_PSW: "AES:bcoFvqU5NnPhfWPHaWA2sA==:jjFJBOwv6LxDXcwIsb0+sw=="
+                MYSQL_PSW: "AES:DziuU1HRqmHAhwXPo3h4rA==:Z9jRxUu49k40EqzvOnrXYA=="
           jobs:
             Build:
               tasks:
@@ -70,7 +70,7 @@ pipelines:
           environment_variables:
               ENV: prod
           secure_variables:
-              MYSQL_PSW: "AES:bcoFvqU5NnPhfWPHaWA2sA==:jjFJBOwv6LxDXcwIsb0+sw=="
+              MYSQL_PSW: "AES:DziuU1HRqmHAhwXPo3h4rA==:Z9jRxUu49k40EqzvOnrXYA=="
           approval:
             type: manual
             allow_only_on_success: true
