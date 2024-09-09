@@ -1,6 +1,6 @@
-format_version: 10                # pipeline version from gocd, based on this options would vary 
+{% comment %} format_version: 10                
 pipelines: 
-  App-Deployment-Template:                                             # name of the pipeline job that will be showing on UI
+  App-Deployment-Template:                                             
     group: Templates
     label_template: "${COUNT}"
     materials:
@@ -12,18 +12,18 @@ pipelines:
         display_order: -1
         lock_behavior: none
     secure_variables:
-        SSH_PSW:  "AES:HRTAQYp1YuLfusysqgp/iA==:KsQ4Lo0I5PwuShFOe2DT9w=="
+        SSH_PSW: "AES:HRTAQYp1YuLfusysqgp/iA==:KsQ4Lo0I5PwuShFOe2DT9w=="
     environment_variables:
         pipeline: "true"
     stages:                                       
-      - dev:                                        # Name of the stage 
+      - dev:                                       
           fetch_materials: true 
           keep_artifacts: false
           clean_workspace: false
           environment_variables:
             ENV: dev
           secure_variables:
-              MYSQL_PSW: "AES:DziuU1HRqmHAhwXPo3h4rA==:Z9jRxUu49k40EqzvOnrXYA=="
+              MYSQL_PSW: "AES:UeSGjqv2jBp/etz6xRrSrw==:vaAKZfVkb+mJJS7vkgLwSA==" 
           jobs:
             Build:
               tasks:
@@ -39,7 +39,7 @@ pipelines:
             environment_variables:
               ENV: qa
             secure_variables:
-                MYSQL_PSW: "AES:DziuU1HRqmHAhwXPo3h4rA==:Z9jRxUu49k40EqzvOnrXYA=="
+                MYSQL_PSW: "AES:UeSGjqv2jBp/etz6xRrSrw==:vaAKZfVkb+mJJS7vkgLwSA==" 
           jobs:
             Build:
               tasks:
@@ -54,7 +54,7 @@ pipelines:
             environment_variables:
               ENV: stage
             secure_variables:
-                MYSQL_PSW: "AES:DziuU1HRqmHAhwXPo3h4rA==:Z9jRxUu49k40EqzvOnrXYA=="
+                MYSQL_PSW: "AES:UeSGjqv2jBp/etz6xRrSrw==:vaAKZfVkb+mJJS7vkgLwSA==" 
           jobs:
             Build:
               tasks:
@@ -80,4 +80,4 @@ pipelines:
                 - exec:
                     command: bash 
                     arguments:
-                    - init.sh
+                    - init.sh {% endcomment %}
