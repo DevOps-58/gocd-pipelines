@@ -15,7 +15,7 @@ pipelines:
         SSH_PSW: "AES:OojdR56nEjJZDswFYHyxRQ==:6PiGhXBgoVigGkmrT5MteQ=="
     environment_variables:                                                            # Pipeline Varaibles
         COMPONENT: mysql
-    template: App-Deployment-Template
+    template: ansible-app-deployments
 
 
     
