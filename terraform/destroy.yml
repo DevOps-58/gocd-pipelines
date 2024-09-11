@@ -12,7 +12,7 @@ pipelines:
         display_order: -1
         lock_behavior: none
     secure_variables:
-        ssh_pwd:  "AES:HRTAQYp1YuLfusysqgp/iA==:KsQ4Lo0I5PwuShFOe2DT9w=="
+        ssh_pwd: "AES:OojdR56nEjJZDswFYHyxRQ==:6PiGhXBgoVigGkmrT5MteQ=="
     environment_variables:
         COMPONENT: frontend
         action: destroy 
