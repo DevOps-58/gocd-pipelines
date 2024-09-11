@@ -1,6 +1,6 @@
 format_version: 10                # pipeline version from gocd, based on this options would vary 
 pipelines: 
-  myql:                                             # name of the pipeline job that will be showing on UI
+  mysql:                                             # name of the pipeline job that will be showing on UI
     group: App-Deployments
     label_template: "${COUNT}"
     materials:
