@@ -15,4 +15,4 @@ pipelines:
         SSH_PSW:  "AES:HRTAQYp1YuLfusysqgp/iA==:KsQ4Lo0I5PwuShFOe2DT9w=="
     environment_variables:
         COMPONENT: backend
-    template: App-Deployments-Template
+    template: App-Deployment-Template
