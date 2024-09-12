@@ -26,10 +26,7 @@ pipelines:
           jobs:
             terraform:
               tasks:
-                - exec: { command: terraform, arguments: ["init", "backend.config", "env-dev/state.tfvars"] }
-                - exec: { command: terraform, arguments: ["apply", "var-file", "env-dev/main.tfvars", "-auto-approve" ]}
-
-
+                - exec: { command: bash, arguments: ["init.sh"] }
       - prod:                                       
           fetch_materials: true 
           keep_artifacts: false
@@ -39,5 +36,4 @@ pipelines:
           jobs:
             terraform:
               tasks:
-                - exec: { command: terraform, arguments: ["init", "backend.config", "env-dev/state.tfvars"] }
-                - exec: { command: terraform, arguments: ["apply", "var-file", "env-dev/main.tfvars", "-auto-approve" ]}
+                - exec: { command: bash, arguments: ["init.sh"] }
