@@ -12,7 +12,7 @@ pipelines:
         display_order: -1
         lock_behavior: none
     secure_variables:
-        ssh_pwd: "AES:OojdR56nEjJZDswFYHyxRQ==:6PiGhXBgoVigGkmrT5MteQ=="
+        ssh_psw: "AES:OojdR56nEjJZDswFYHyxRQ==:6PiGhXBgoVigGkmrT5MteQ=="
     environment_variables:
         tool_name: vault 
     stages:                                       
