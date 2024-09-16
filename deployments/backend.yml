@@ -12,7 +12,7 @@ pipelines:
         display_order: -1
         lock_behavior: none
     secure_variables:
-        SSH_PSW: "AES:n+ddBuplxzxe8DVndUpzGA==:w+Ky5mJPhdddBu68OJ1Wfg=="
+        ssh_pwd: "AES:n+ddBuplxzxe8DVndUpzGA==:w+Ky5mJPhdddBu68OJ1Wfg=="
         vault_token: "AES:9XlVsj95TTq/U7V7Q1D9mQ==:cJTw+TheeJY7vpbK6HV56EvuFUN7MmlinU4B4zx0GtM="
     environment_variables:
         COMPONENT: backend
