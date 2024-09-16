@@ -70,7 +70,7 @@ pipelines:
           environment_variables:
               ENV: prod
           secure_variables:
-              MYSQL_PSW: "AES:DziuU1HRqmHAhwXPo3h4rA==:Z9jRxUu49k40EqzvOnrXYA=="
+              MYSQL_PSW: "AES:63dtzkGDL5WUhz+HTYQhhw==:yrXgtVcvkr+DoqO/C9LjNg=="
           approval:
             type: manual
             allow_only_on_success: true
