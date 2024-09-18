@@ -1,0 +1,28 @@
+format_version: 10                
+pipelines: 
+  prometheus-cm:                                            
+    group: Tools-CM
+    label_template: "${COUNT}"
+    materials:
+      tools:
+        git: https://github.com/DevOps-58/tools-automation.git
+        branch: main
+        auto_update: true 
+        shallow_clone: true
+        display_order: -1
+        lock_behavior: none
+    secure_variables:
+        ssh_pwd: "AES:n+ddBuplxzxe8DVndUpzGA==:w+Ky5mJPhdddBu68OJ1Wfg=="
+        vault_token: "AES:9XlVsj95TTq/U7V7Q1D9mQ==:cJTw+TheeJY7vpbK6HV56EvuFUN7MmlinU4B4zx0GtM="
+    environment_variables:
+        tool_name: prometheus 
+    stages:                                       
+      - infra:                                       
+          fetch_materials: true 
+          keep_artifacts: false
+          clean_workspace: false
+          jobs:
+            terraform:
+              tasks:
+                - exec: { command: bash, arguments: ["setup-tools.sh"] }
+   
